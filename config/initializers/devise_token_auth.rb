@@ -61,4 +61,9 @@ DeviseTokenAuth.setup do |config|
   # devise confirmable module. If you want to use devise confirmable module and
   # send email, set it to true. (This is a setting for compatibility)
   config.send_confirmation_email = true
+
+  # Olhar gitbook do devise (colocar a url que será redirecionado quando confirmar o email e quando resetar a senha)
+  config.default_confirm_success_url = 'www.google.com'
+  config.default_password_reset_url = 'www.google.com'
+  config.remove_tokens_after_password_reset = true
 end
