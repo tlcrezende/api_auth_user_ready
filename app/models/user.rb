@@ -12,4 +12,7 @@ class User < ActiveRecord::Base
           :validatable
           
   include DeviseTokenAuth::Concerns::User
+
+  #pode ser no plural ou singular
+  has_many :articles, dependent: :destroy
 end
