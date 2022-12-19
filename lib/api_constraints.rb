@@ -5,6 +5,6 @@ class ApiConstraints
     end
 
     def matches?(req)
-        @default || req.header['Accept'].include?("application/vnd.blog.v#{@version}")
+        @default || req.header['Accept']&.include?("application/vnd.blog.v#{@version}")
     end
 end
